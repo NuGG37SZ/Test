@@ -13,20 +13,7 @@ namespace Airoport
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            SignUp signUp = new SignUp();
-
-            if (signUp.ShowDialog() == DialogResult.OK)
-            {
-                if (!signUp.IsDisposed)
-                {
-                    switch (SignUp.roleDb)
-                    {
-                        case "administrator":
-                            Application.Run(new Main());
-                            break;
-                    }
-                }
-            }
+            Application.Run(new Main());
         }
     }
 }
